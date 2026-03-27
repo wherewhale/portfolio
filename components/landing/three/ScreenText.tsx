@@ -1,7 +1,7 @@
-import Screen from "@/components/three/Screen";
 import { PerspectiveCamera, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
+import Screen from "./Screen";
 
 function ScreenText({ invert, x = 0, y = 1.2, ...props }: any) {
   const textRef = useRef<any>(null);

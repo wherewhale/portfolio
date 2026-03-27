@@ -2,9 +2,9 @@
 
 import { useMemo, useContext, createContext, JSX } from "react";
 import { useGLTF, Merged } from "@react-three/drei";
-import ScreenInteractive from "@/components/three/ScreenInteractive";
-import Leds from "@/components/three/Leds";
-import ScreenText from "@/components/three/ScreenText";
+import Leds from "./Leds";
+import ScreenInteractive from "./ScreenInteractive";
+import ScreenText from "./ScreenText";
 
 const context = createContext<any>(null);
 

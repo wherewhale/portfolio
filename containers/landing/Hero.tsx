@@ -9,8 +9,10 @@ import {
   Bloom,
   DepthOfField,
 } from "@react-three/postprocessing";
-import { Computers, Instances } from "@/components/three/Computers";
-import CameraRig from "@/components/three/CameraRig";
+import { NAVIGATION_ITEMS } from "@/constants/Navigation";
+import MenuButton from "@/components/landing/MenuButton";
+import { Computers, Instances } from "@/components/landing/three/Computers";
+import CameraRig from "@/components/landing/three/CameraRig";
 
 export default function HeroSection() {
   const textControls = useAnimation();
@@ -150,6 +152,20 @@ export default function HeroSection() {
               <CameraRig />
               <BakeShadows />
             </Canvas>
+          </div>
+
+          {/* 인터랙티브 내비게이션 버튼 그룹 */}
+          <div className="absolute inset-0 z-30 flex items-end md:items-center justify-center pointer-events-none pb-20 md:pb-0">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8 px-6 pointer-events-auto">
+              {NAVIGATION_ITEMS.map((item, index) => (
+                <MenuButton
+                  key={item.path}
+                  href={item.path}
+                  label={item.name}
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
         </motion.div>
       )}
