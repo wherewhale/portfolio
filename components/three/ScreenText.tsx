@@ -24,7 +24,7 @@ function ScreenText({ invert, x = 0, y = 1.2, ...props }: any) {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} />
       <Text
-        font="/Inter-Medium.woff"
+        font="/assets/fonts/Inter-Medium.woff"
         position={[x, y, 0]}
         ref={textRef}
         fontSize={4}

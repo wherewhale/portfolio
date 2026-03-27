@@ -6,7 +6,7 @@ import { useRef, useMemo } from "react";
 
 function Leds({ instances }: any) {
   const ref = useRef<any>(null);
-  const { nodes } = useGLTF("/computers_1-transformed.glb") as any;
+  const { nodes } = useGLTF("/assets/glb/computers_1-transformed.glb") as any;
   useMemo(() => {
     nodes.Sphere.material = new THREE.MeshBasicMaterial();
     nodes.Sphere.material.toneMapped = false;

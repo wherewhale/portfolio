@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useContext, createContext, useRef, JSX } from "react";
+import { useMemo, useContext, createContext, JSX } from "react";
 import { useGLTF, Merged } from "@react-three/drei";
 import ScreenInteractive from "@/components/three/ScreenInteractive";
 import Leds from "@/components/three/Leds";
@@ -9,7 +9,7 @@ import ScreenText from "@/components/three/ScreenText";
 const context = createContext<any>(null);
 
 export function Instances({ children, ...props }: any) {
-  const { nodes } = useGLTF("/computers_1-transformed.glb") as any;
+  const { nodes } = useGLTF("/assets/glb/computers_1-transformed.glb") as any;
   const instances = useMemo(
     () => ({
       Object: nodes.Object_4,
@@ -40,7 +40,7 @@ export function Instances({ children, ...props }: any) {
 
 export function Computers(props: JSX.IntrinsicElements["group"]) {
   const { nodes: n, materials: m } = useGLTF(
-    "/computers_1-transformed.glb",
+    "/assets/glb/computers_1-transformed.glb",
   ) as any;
   const instances = useContext(context);
 
