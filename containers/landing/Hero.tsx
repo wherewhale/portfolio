@@ -9,7 +9,7 @@ import {
   Bloom,
   DepthOfField,
 } from "@react-three/postprocessing";
-import { NAVIGATION_ITEMS } from "@/constants/Navigation";
+import { NAVIGATION_ITEMS } from "@/constants/navigation";
 import MenuButton from "@/components/landing/MenuButton";
 import { Computers, Instances } from "@/components/landing/three/Computers";
 import CameraRig from "@/components/landing/three/CameraRig";
