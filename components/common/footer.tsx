@@ -1,3 +1,5 @@
+import { FOOTER_MENUS } from "@/constants/footer";
+import { GITHUB_URL } from "@/constants/links";
 import Link from "next/link";
 
 const Footer = () => {
@@ -15,105 +17,34 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Product</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="/explore"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Explore Packages
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cli"
-                  className="hover:text-foreground transition-colors"
-                >
-                  CLI Reference
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="/docs"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/community"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Community
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="/privacy"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {FOOTER_MENUS.map((menu) => (
+            <div key={menu.title}>
+              <h4 className="font-semibold mb-4">{menu.title}</h4>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                {menu.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="hover:text-foreground transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Wha1eSon. All rights reserved.</p>
           <div className="flex gap-4">
             <Link
-              href="https://github.com/wherewhale"
+              href={GITHUB_URL}
               target="_blank"
               className="hover:text-foreground transition-colors"
             >
               GitHub
-            </Link>
-            <Link
-              href="https://velog.io/@wha1eson/posts"
-              target="_blank"
-              className="hover:text-foreground transition-colors"
-            >
-              Velog
             </Link>
           </div>
         </div>

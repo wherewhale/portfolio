@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import GlobalNavigationBar from "@/components/common/global-navigation-bar.tsx";
+import GlobalNavigationBar from "@/components/common/GlobalNavigationBar.tsx";
 import HeroSection from "@/containers/landing/HeroSection";
 
 const Footer = dynamic(() => import("@/components/common/footer"));
