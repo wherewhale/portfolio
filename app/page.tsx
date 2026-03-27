@@ -1,4 +1,4 @@
-import HeroSection from "@/containers/landing/HeroSection";
+import HeroSection from "@/containers/landing/Hero";
 
 function LandingPage() {
   return (

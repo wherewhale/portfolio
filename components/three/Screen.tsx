@@ -1,7 +1,9 @@
 import { RenderTexture, useGLTF } from "@react-three/drei";
 
 function Screen({ frame, panel, children, ...props }: any) {
-  const { nodes, materials } = useGLTF("/computers_1-transformed.glb") as any;
+  const { nodes, materials } = useGLTF(
+    "/assets/glb/computers_1-transformed.glb",
+  ) as any;
   return (
     <group {...props}>
       <mesh
