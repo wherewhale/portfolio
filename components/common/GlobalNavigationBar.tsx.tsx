@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import ThemeToggle from "@/components/common/ThemeToggle";
-import { NAVIGATION_ITEMS } from "@/constants/Navigation";
+import { NAVIGATION_ITEMS } from "@/constants/navigation";
 
 const GlobalNavigationBar = () => {
   const pathname = usePathname();
