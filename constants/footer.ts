@@ -7,7 +7,7 @@ export const FOOTER_MENUS: FooterMenu[] = [
     links: [
       {
         name: "About Me",
-        href: "/about",
+        href: "/profile",
       },
     ],
   },

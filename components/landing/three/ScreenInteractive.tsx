@@ -1,6 +1,6 @@
-import Screen from "@/components/three/Screen";
-import { SpinningBox } from "@/components/three/SpinningBox";
 import { PerspectiveCamera } from "@react-three/drei";
+import Screen from "./Screen";
+import { SpinningBox } from "./SpinningBox";
 
 function ScreenInteractive(props: any) {
   return (
