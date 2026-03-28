@@ -9,13 +9,12 @@ import { NAVIGATION_ITEMS } from "@/constants/navigation";
 
 const GlobalNavigationBar = () => {
   const pathname = usePathname();
-  const isLanding = pathname === "/"; // 랜딩 페이지 여부 확인
+  const isLanding = pathname === "/";
   const [hoveredPath, setHoveredPath] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container max-w-7xl mx-auto flex flex-col px-4">
-        {/* 1층: 로고 및 테마 토글 */}
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
@@ -34,7 +33,6 @@ const GlobalNavigationBar = () => {
           </div>
         </div>
 
-        {/* 2층: 네비게이션 메뉴 */}
         {!isLanding && (
           <nav
             aria-label="main navigation"

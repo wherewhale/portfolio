@@ -35,19 +35,18 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
     });
 
     return () => observer.disconnect();
-  }, [sections]); // sections가 변경될 때마다 옵저버 재실행
+  }, [sections]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileTocOpen(false); // 이동 후 모바일 메뉴 닫기
+      setIsMobileTocOpen(false);
     }
   };
 
   return (
     <>
-      {/* 데스크톱 우측 고정 Stepper (목차) */}
       <aside className="hidden lg:block w-48 shrink-0 sticky top-32 h-fit">
         <nav className="flex flex-col gap-4">
           <span className="font-bold text-sm text-muted-foreground uppercase tracking-wider mb-2">
@@ -70,7 +69,6 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
         </nav>
       </aside>
 
-      {/* 모바일 하단 플로팅 버튼 */}
       <div className="fixed bottom-6 right-6 lg:hidden z-50">
         <button
           onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
@@ -81,7 +79,6 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
         </button>
       </div>
 
-      {/* 모바일 Stepper 오버레이 메뉴 */}
       <AnimatePresence>
         {isMobileTocOpen && (
           <motion.div
