@@ -5,14 +5,16 @@
 
 ## 🚀 Features
 
-- **프로젝트 쇼케이스 (`/projects`)**
+- **메인 및 프로필 (`/`, `/profile`)**
+  - 개발자로서의 가치관과 핵심 역량을 소개하는 랜딩 및 프로필 페이지입니다.
+- **프로젝트 쇼케이스 (`/projects`, `/projects/[id]`)**
   - 각 프로젝트별 기여도, 성과, 트러블 슈팅 경험을 체계적으로 제공합니다.
   - `TableOfContents (TOC)`를 통해 긴 상세 페이지에서도 원하는 섹션으로 빠르게 이동할 수 있습니다.
 - **기술 아티클 (`/articles`)**
   - 기술 블로그에 작성한 글들을 태그(주제) 및 칭호(Badge)별로 분류하여 제공합니다.
   - `Debounce`가 적용된 검색 기능과 부드러운 필터링 애니메이션(`Framer Motion`)을 지원합니다.
-- **성능 및 리소스 최적화**
-  - `Supabase Storage`를 외부 이미지 CDN으로 활용하고 Next.js의 Image 최적화를 우회하여, 고화질 이미지를 다수 사용함에도 Vercel 서버의 부하와 요금 한도를 방지했습니다.
+- **사용자 경험(UX) 및 리소스 최적화**
+  - 커스텀 404 페이지(`not-found.tsx`)를 통해 잘못된 접근 시에도 유저 이탈을 방지합니다.
 
 ## 🛠 Tech Stack
 
@@ -47,7 +49,7 @@
 1. 레포지토리를 클론합니다.
 
 ```bash
-git clone https://github.com/본인아이디/포트폴리오-레포지토리.git
+git clone https://github.com/wherewhale/portfolio.git
 ```
 
 2. 패키지를 설치합니다.
