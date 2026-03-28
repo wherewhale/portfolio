@@ -37,13 +37,11 @@ export default function ProjectPage({ params }: Props) {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-24 flex items-start gap-12 pb-32">
-      {/* 좌측 메인 콘텐츠 영역 */}
-      <div className="flex-1 flex flex-col gap-24">
-        {/* 상단 뒤로가기 버튼 */}
+    <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-24 flex flex-col lg:flex-row items-start gap-12 pb-32">
+      <div className="flex-1 flex flex-col gap-24 min-w-0 w-full">
         <Link
           href="/projects"
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
+          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group w-fit"
         >
           <ChevronLeft
             size={20}
@@ -73,8 +71,9 @@ export default function ProjectPage({ params }: Props) {
         )}
       </div>
 
-      {/* 우측 공통 TOC 컴포넌트 */}
-      <TableOfContents sections={tocSections} />
+      <div className="hidden lg:block shrink-0 w-64 sticky top-32">
+        <TableOfContents sections={tocSections} />
+      </div>
     </div>
   );
 }
