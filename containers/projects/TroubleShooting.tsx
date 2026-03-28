@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-} from "@/components/ui/carousel";
+} from "@/components/ui/Carousel";
 import { Troubleshooting } from "@/types/project";
 import { CheckCircle2, ExternalLink, Zap } from "lucide-react";
 import Image from "next/image";

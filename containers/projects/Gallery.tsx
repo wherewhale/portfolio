@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/components/ui/Carousel";
 import { ImageIcon } from "lucide-react";
 import Image from "next/image";
 

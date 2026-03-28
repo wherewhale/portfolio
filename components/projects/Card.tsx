@@ -5,7 +5,7 @@ import {
   CardTitle,
   CardContent,
   CardDescription,
-} from "../ui/card";
+} from "../ui/Card";
 import Image from "next/image";
 import { Project } from "@/types/project";
 

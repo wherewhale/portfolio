@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/Badge";
 import { ProjectDetail } from "@/types/project";
 import { BarChart3, Calendar, Code2, ExternalLink } from "lucide-react";
 import Image from "next/image";
