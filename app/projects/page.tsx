@@ -6,7 +6,6 @@ import ProjectCard from "@/components/projects/Card";
 import Link from "next/link";
 
 export default function ProjectsPage() {
-  // TOC에 넘겨줄 섹션 데이터 생성
   const tocSections = PROJECTS_DATA.map((group) => ({
     id: `year-${group.year}`,
     title: `${group.year}년`,
@@ -14,7 +13,6 @@ export default function ProjectsPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-24 flex items-start gap-12">
-      {/* 좌측 메인 프로젝트 리스트 */}
       <div className="flex-1 flex flex-col gap-24">
         {PROJECTS_DATA.map((group) => (
           <section
@@ -26,7 +24,6 @@ export default function ProjectsPage() {
               {group.year}
             </h2>
 
-            {/* 프로젝트 카드 그리드 (데스크탑 2열, 모바일 1열) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {group.projects.map((project, idx) => (
                 <Link
@@ -42,7 +39,6 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      {/* 우측 공통 TOC 컴포넌트 */}
       <TableOfContents sections={tocSections} />
     </div>
   );
