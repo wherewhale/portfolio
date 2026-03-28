@@ -3,5 +3,6 @@ export interface FooterMenu {
   links: {
     name: string;
     href: string;
+    isExternal?: boolean;
   }[];
 }

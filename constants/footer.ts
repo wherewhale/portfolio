@@ -16,23 +16,23 @@ export const FOOTER_MENUS: FooterMenu[] = [
     links: [
       {
         name: "Palette",
-        href: "/projects/1",
+        href: "/projects/palette",
       },
       {
         name: "GyopoolAI",
-        href: "/projects/2",
+        href: "/projects/gyopool",
       },
       {
         name: "KB refit",
-        href: "/projects/3",
+        href: "/projects/kb-refit",
       },
       {
         name: "DOLDOL",
-        href: "/projects/4",
+        href: "/projects/doldol",
       },
       {
         name: "Copool",
-        href: "/projects/5",
+        href: "/projects/copool",
       },
     ],
   },
@@ -42,10 +42,12 @@ export const FOOTER_MENUS: FooterMenu[] = [
       {
         name: "Velog",
         href: VELOG_URL,
+        isExternal: true,
       },
       {
         name: "Notion",
         href: NOTION_URL,
+        isExternal: true,
       },
     ],
   },

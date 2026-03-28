@@ -25,6 +25,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
+                      target={link.isExternal ? "_blank" : "_self"}
                       className="hover:text-foreground transition-colors"
                     >
                       {link.name}
