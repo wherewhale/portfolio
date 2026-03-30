@@ -55,7 +55,7 @@ function ProfileIntroSection() {
       >
         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
           상상을 현실로 만드는 <br className="hidden md:block" />
-          개발자 손영호입니다<span className="text-primary">.</span>
+          개발자 WHA1E입니다<span className="text-primary">.</span>
         </h1>
 
         <div className="text-muted-foreground leading-relaxed space-y-4 whitespace-pre-line text-justify break-keep">

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "WHA1E Portfolio",
-  description: "상상을 현실로 만드는 개발자 손영호입니다.",
+  description: "상상을 현실로 만드는 개발자 WHA1E입니다.",
 };
 
 export default function RootLayout({

@@ -75,7 +75,7 @@ export default function HeroSection() {
             animate={textControls}
             className="text-right"
           >
-            개발자 손영호입니다.
+            개발자 WHA1E입니다.
           </motion.div>
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
