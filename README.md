@@ -18,7 +18,7 @@
 
 ## 🛠 Tech Stack
 
-- **Framework:** Next.js 14/15 (App Router), React
+- **Framework:** Next.js 16 (App Router), React
 - **Language:** TypeScript
 - **Styling & UI:** TailwindCSS, `lucide-react` (Icons), `shadcn/ui`
 - **Animation:** Framer Motion
